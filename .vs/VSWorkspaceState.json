@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Database",
+    "\\Resource Access",
+    "\\Resource Access\\CFMData",
+    "\\Resource Access\\CFMData\\Utility",
+    "\\UserInterface",
+    "\\UserInterface\\Web",
+    "\\UserInterface\\Web\\CFMWeb",
+    "\\UserInterface\\Web\\CFMWeb\\Controllers"
+  ],
+  "SelectedNode": "\\Resource Access\\CFMData\\Utility\\ADOHelper.cs",
+  "PreviewInSolutionExplorer": false
+}

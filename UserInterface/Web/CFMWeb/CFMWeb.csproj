@@ -1,0 +1,209 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**;$(SpaRoot)platforms\**</DefaultItemExcludes>
+<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ElmahCore" Version="1.2.5" />
+    <PackageReference Include="ElmahCore.Sql" Version="1.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\dist\out-tsc\**" />
+    <Compile Remove="ClientApp\platforms\**" />
+    
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\dist\out-tsc\**" />
+    <Content Remove="ClientApp\platforms\**" />
+    
+   
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="ClientApp\dist\out-tsc\**" />
+    
+    <EmbeddedResource Remove="ClientApp\platforms\**" />
+    
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\dist\out-tsc\**" />
+    <None Remove="ClientApp\platforms\**" />
+    
+    <None Remove="wwwroot\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**;$(SpaRoot)platforms\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="ClientApp\dist\out-tsc\e2e\src\app.e2e-spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\e2e\src\app.e2e-spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\e2e\src\app.po.js" />
+    <None Remove="ClientApp\dist\out-tsc\e2e\src\app.po.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app-routing.module.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app-routing.module.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.module.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.module.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.server.module.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\app.server.module.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\auth.guard.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\auth.guard.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb\breadcrumb.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb\breadcrumb.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb\breadcrumb.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\breadcrumb\breadcrumb.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\can-deactivate.guard.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\can-deactivate.guard.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\confirmation-message\confirmation-message.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\confirmation-message\confirmation-message.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\confirmation-message\confirmation-message.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\confirmation-message\confirmation-message.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\counter\counter.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\counter\counter.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\counter\counter.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\counter\counter.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\custom-authentication.service.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\custom-authentication.service.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\data.service.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\data.service.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\fetch-data\fetch-data.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\fetch-data\fetch-data.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\GlobalSettings.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\GlobalSettings.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\home\home.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\home\home.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader-interceptor.service.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader-interceptor.service.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader.service.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader.service.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader\loader.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader\loader.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader\loader.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\loader\loader.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login-test\login-test.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login-test\login-test.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login-test\login-test.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login-test\login-test.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login\login.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login\login.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login\login.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\login\login.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\logout\logout.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\logout\logout.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\logout\logout.component.spec.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\logout\logout.component.spec.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\nav-menu\nav-menu.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\nav-menu\nav-menu.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\SlickRemote.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\app\SlickRemote.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\filter.pipe.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\filter.pipe.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\angularComponentOutput.interface.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\angularComponentOutput.interface.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\angularUtil.service.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\angularUtil.service.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\custom-angularComponentEditor.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\custom-angularComponentEditor.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\custom-angularComponentFilter.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\custom-angularComponentFilter.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\CustomAngularSlickgridModule.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\CustomAngularSlickgridModule.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\editor-ng-select.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\editor-ng-select.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\filter-ng-select.component.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickEditors\filter-ng-select.component.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.AUDateFormatter.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.AUDateFormatter.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.CurrencyFormatter.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.CurrencyFormatter.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.CustomCheckMarkFormatter.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\SlickFormatters\Slick.CustomCheckMarkFormatter.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\Validators\FormControlValidator.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\CustomComponents\Validators\FormControlValidator.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\environments\environment.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\environments\environment.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\environments\environment.prod.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\environments\environment.prod.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\main.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\main.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\polyfills.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\polyfills.js.map" />
+    <None Remove="ClientApp\dist\out-tsc\src\test.js" />
+    <None Remove="ClientApp\dist\out-tsc\src\test.js.map" />
+    <None Remove="ClientApp\src\app\account\formfields.ts" />
+    <None Remove="ClientApp\src\app\AppSharedData.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs" Link="GlobalAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\CFMCommon\CFMCommon.csproj" />
+    <ProjectReference Include="..\..\..\Resource Access\CFMData\CFMData.csproj" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+ <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+</Project>

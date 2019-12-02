@@ -1,0 +1,76 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.swp
+*.*~
+project.lock.json
+package-lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Visual Studio Code
+.vscode
+
+# Rider
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Ww]wwroot/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Logs
+[Ll]ogs/
+[Ll]og/
+# Visual Studio
+/Source/DatabaseMigration/MigrateDatabase/bin/Debug/netcoreapp2.2
+/Source/DatabaseMigration/MigrateDatabase/obj
+
+
+
+/Source/Common/CFMCommon/bin/Debug/netcoreapp2.2
+/Source/Common/CFMCommon/obj
+/Source/Resource Access/CFMData/bin/Debug/netcoreapp2.2
+/Source/Resource Access/CFMData/obj
+/Source/Resource Access/temp
+/Documentation/~$W - Client Funds Management Application V6.docx
+/WorkingNSAndWeb
+/WorkingNativeScript_Formly
+/Web_20191012
+/node_modules
+/app
+/Source/UserInterface/NSAngular
+/Source/UserInterface/V2
+/Source/UserInterface/V1
+/Source/UserInterface/Web/CFMWeb/ClientApp/App_Resources/Android - old
+/Source/UserInterface/Web/CFMWeb/ClientApp/package-lock - Copy.json
+/Source/UserInterface/Web/CFMWeb/ClientApp/package - Copy.json
+/Source/UserInterface/Web/CFMWeb/ClientApp/package - Copy (3).json
+/Source/UserInterface/Web/CFMWeb/ClientApp/package - Copy (2).json
+/Source/UserInterface/Web/CFMWeb/ClientApp/webpack.config - Copy (2).js
+/Source/UserInterface/Web/CFMWeb/ClientApp/appsettings.json
+/Source/UserInterface/Web/CFMWeb/ClientApp/webpack.config - Copy.js
+/src_20191025
+/Source/Resource Access/CFMData - Copy (2)
+/.vs/ClientFundsManagement/DesignTimeBuild
+/.vs/ClientFundsManagement/v16/Server/sqlite3

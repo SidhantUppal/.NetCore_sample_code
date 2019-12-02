@@ -1,0 +1,10 @@
+to install recorder, make sure you run cmd as an administrator and run the following command
+
+
+npm install --global --production windows-build-tools
+
+node --inspect-brk .\..\node_modules\protractor\bin\protractor protractor.conf.js
+
+chrome://inspect/#devices
+
+protractor protractor.conf.js
